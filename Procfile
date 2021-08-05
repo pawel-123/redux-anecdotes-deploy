@@ -1,2 +1,2 @@
-web: npm run start-prod
-server: npm run server
+web: npm run server
+server: npm run start-prod
