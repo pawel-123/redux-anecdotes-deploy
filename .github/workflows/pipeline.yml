@@ -25,7 +25,7 @@ jobs:
           heroku_app_name: "redux-anecdotes"
           heroku_email: "ptcebula@gmail.com"
           healthcheck: "https://redux-anecdotes.herokuapp.com/health"
-          checkstring: "ok"
+          checkstring: "ok1"
           rollbackonhealthcheckfailed: true
   
   semantic_versioning_tagging:
