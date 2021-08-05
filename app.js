@@ -15,7 +15,7 @@ app.get('/health', (req, res) => {
 app.use(express.static('build'))
 
 app.get('/health', (req, res) => {
-  res.send('ok10')
+  res.send('ok1')
 })
 
 app.listen(PORT, () => {
