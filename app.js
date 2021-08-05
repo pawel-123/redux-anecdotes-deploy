@@ -1,9 +1,14 @@
+const jsonServer = require('json-server')
+const app = jsonServer.create()
+const router = jsonServer.router('db.json')
+const middlewares = jsonServer.defaults()
 const express = require('express')
-const app = express()
+
 
 // Heroku dynamically sets a port
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3001
 
+app.use('/db', middlewares, router)
 app.use(express.static('build'))
 
 app.get('/health', (req, res) => {
