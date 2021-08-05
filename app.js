@@ -10,13 +10,9 @@ const PORT = process.env.PORT || 3001
 
 app.use('/db', middlewares, router)
 app.get('/health', (req, res) => {
-  res.send('ok')
-})
-app.use(express.static('build'))
-
-app.get('/health', (req, res) => {
   res.send('ok1')
 })
+app.use(express.static('build'))
 
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console
