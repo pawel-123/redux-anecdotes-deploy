@@ -9,6 +9,9 @@ const express = require('express')
 const PORT = process.env.PORT || 3001
 
 app.use('/db', middlewares, router)
+app.get('/health', (req, res) => {
+  res.send('ok')
+})
 app.use(express.static('build'))
 
 app.get('/health', (req, res) => {
